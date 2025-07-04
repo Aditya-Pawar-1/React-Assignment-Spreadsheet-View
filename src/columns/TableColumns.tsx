@@ -11,6 +11,7 @@ export const columns = [
       columnHelper.accessor("id", {
         header: "#",
         cell: (info) => info.getValue(),
+        size: 32,
         meta: { showIcon: false },
       }),
     ],
@@ -21,11 +22,13 @@ export const columns = [
       columnHelper.accessor("jobRequest", {
         header: "Job Request",
         cell: (info) => info.getValue(),
+        size: 256,
         meta: { showIcon: true, showArrow: true },
       }),
       columnHelper.accessor("submitted", {
         header: "Submitted",
         cell: (info) => info.getValue(),
+        size: 124,
         meta: { showIcon: true, showArrow: true },
       }),
       columnHelper.accessor("status", {
@@ -52,12 +55,13 @@ export const columns = [
             </span>
           );
         },
-
+        size: 124,
         meta: { showIcon: true, showArrow: true },
       }),
       columnHelper.accessor("submitter", {
         header: "Submitter",
         cell: (info) => info.getValue(),
+        size: 124,
         meta: { showIcon: true, showArrow: true },
       }),
     ],
@@ -83,6 +87,7 @@ export const columns = [
             ""
           );
         },
+        size: 124,
         meta: { showIcon: true, showArrow: true },
       }),
     ],
@@ -93,6 +98,7 @@ export const columns = [
       columnHelper.accessor("assigned", {
         header: "Assigned",
         cell: (info) => info.getValue(),
+        size: 140,
         meta: { showIcon: true },
       }),
     ],
@@ -108,23 +114,23 @@ export const columns = [
           let color = "";
 
           if (value === "High") {
-            color += "text-red-600";
+            color += "text-[#EF4D44]";
           } else if (value === "Medium") {
-            color += "text-yellow-600";
+            color += "text-[#C29210]";
           } else if (value === "Low") {
-            color += "text-blue-600";
+            color += "text-[#1A8CFF]";
           } else {
             color += "text-gray-500";
           }
 
-          return (
-            <span className={`font-semibold ${color}`}>{value}</span>
-          );
+          return <span className={`font-semibold ${color}`}>{value}</span>;
         },
+        size: 124,
       }),
       columnHelper.accessor("dueDate", {
         header: "Due Date",
         cell: (info) => info.getValue(),
+        size: 124,
       }),
     ],
     meta: { showIcon: true, showMore: true },
@@ -144,6 +150,7 @@ export const columns = [
             ""
           );
         },
+        size: 124,
       }),
     ],
     meta: { showIcon: true, showMore: true },
@@ -156,6 +163,7 @@ export const columns = [
         id: "+",
         header: "",
         cell: () => null,
+        size: 124,
         enableSorting: false,
       }),
     ],

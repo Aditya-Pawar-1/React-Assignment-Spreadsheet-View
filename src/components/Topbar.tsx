@@ -1,12 +1,16 @@
+import { handleOpenSidePanel } from "../utils/actions";
+
 const Topbar = () => {
   return (
     <div className="px-4 py-1 h-[4rem] border-b-[1px] border-[#AFAFAF] w-full flex items-center justify-between">
       <div className="flex items-center justify-center gap-4">
-        <img
-          src="/icons/Panel.svg"
-          alt="Panel Icon"
-          className="w-6 h-6 relative overflow-hidden"
-        />
+        <button onClick={handleOpenSidePanel}>
+          <img
+            src="/icons/Panel.svg"
+            alt="Panel Icon"
+            className="w-6 h-6 relative overflow-hidden"
+          />
+        </button>
         <p className="text-base font-medium leading-tight flex items-center justify-center gap-1">
           <span className="text-[#AFAFAF]">Workspace</span>
           <img
@@ -32,7 +36,7 @@ const Topbar = () => {
             name="search"
             id="search"
             placeholder="Search within sheet"
-            className="border-0 focus:border-0 focus:ring-0 focus:outline-none w-full text-xs content-center rounded-md p-1"
+            className="border-0 focus:border-0 focus:ring-0 focus:outline-none w-full text-xs content-center bg-transparent rounded-md p-1"
           />
         </div>
         <button type="button" className="relative">
