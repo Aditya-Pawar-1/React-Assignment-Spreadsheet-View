@@ -1,6 +1,6 @@
 const Topbar = () => {
   return (
-    <div className="px-4 py-1 h-[4rem] border-b-1 border-[#AFAFAF] w-full flex items-center justify-between">
+    <div className="px-4 py-1 h-[4rem] border-b-[1px] border-[#AFAFAF] w-full flex items-center justify-between">
       <div className="flex items-center justify-center gap-4">
         <img
           src="/icons/Panel.svg"

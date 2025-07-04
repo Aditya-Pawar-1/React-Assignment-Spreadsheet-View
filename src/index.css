@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap');
-@import "tailwindcss";
-
-@theme{
-  --color-Primary: hex(#000000);
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
+  --color-Primary: #000000;
   --font-sans: "Work Sans", system-ui, sans-serif; 
   font-family: var(--font-sans);
   line-height: 1.5;
