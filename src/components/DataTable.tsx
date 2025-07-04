@@ -131,9 +131,9 @@ const DataTable = ({ data }: Props) => {
                       maxWidth: cell.column.getSize(),
                     }}
                     className={`border cursor-cell
-                      ${isSelected ? "border-2 border-blue-500" : "border-[#F6F6F6]"}
+                      ${isSelected && "border-2 border-blue-500"}
                       ${cell.column.columnDef.header === "#" ? "p-1 text-center max-w-fit" : "px-4 py-2"}
-                      ${cell.column.columnDef.header === "+" ? "border-x-2 border-dashed border-[#F6F6F6]" : ""}
+                      ${cell.column.columnDef.id === "+" ? "border-x-3 border-dashed border-[#CBCBCB]" : ""}
                       ${
                         (cell.column.columnDef.header === "Status" ||
                           cell.column.columnDef.header === "Priority") &&

@@ -3,6 +3,7 @@ import Toolbar from "../components/Toolbar";
 import DataTable from "../components/DataTable";
 import dataJSON from "../data/Tabledata.json";
 import type { Data } from "../types";
+import TitleRow from "../components/TitleRow";
 
 const Spreadsheet = () => {
   const typedData: Data[] = dataJSON.map((item) => ({
@@ -18,6 +19,9 @@ const Spreadsheet = () => {
       <Toolbar />
       <div className="flex-1 overflow-auto">
         <DataTable data={typedData} />
+      </div>
+      <div className="w-full relative">
+        <TitleRow />
       </div>
     </div>
   );
